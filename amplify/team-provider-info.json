@@ -1,0 +1,39 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-petdispencer-staging-163113-authRole",
+      "UnauthRoleArn": "arn:aws:iam::463356637850:role/amplify-petdispencer-staging-163113-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::463356637850:role/amplify-petdispencer-staging-163113-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-petdispencer-staging-163113-deployment",
+      "UnauthRoleName": "amplify-petdispencer-staging-163113-unauthRole",
+      "StackName": "amplify-petdispencer-staging-163113",
+      "StackId": "arn:aws:cloudformation:us-east-2:463356637850:stack/amplify-petdispencer-staging-163113/1d259ce0-c489-11eb-ba6d-028d1bb138be",
+      "AmplifyAppId": "d2ym5jmqcu6gm"
+    },
+    "categories": {
+      "auth": {
+        "petdispencer068d26e2": {}
+      }
+    }
+  },
+  "ptenv": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-petdispencer-ptenv-175303-authRole",
+      "UnauthRoleArn": "arn:aws:iam::463356637850:role/amplify-petdispencer-ptenv-175303-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::463356637850:role/amplify-petdispencer-ptenv-175303-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-petdispencer-ptenv-175303-deployment",
+      "UnauthRoleName": "amplify-petdispencer-ptenv-175303-unauthRole",
+      "StackName": "amplify-petdispencer-ptenv-175303",
+      "StackId": "arn:aws:cloudformation:us-east-2:463356637850:stack/amplify-petdispencer-ptenv-175303/72481270-d5cd-11eb-a402-0a9519bc4280",
+      "AmplifyAppId": "d2ym5jmqcu6gm"
+    },
+    "categories": {
+      "auth": {
+        "petdispencer068d26e2": {},
+        "petdispencer084176d0": {}
+      }
+    }
+  }
+}

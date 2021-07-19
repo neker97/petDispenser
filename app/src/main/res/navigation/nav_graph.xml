@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/diets_list_fragment">
+    <fragment
+        android:id="@+id/diets_list_fragment"
+        android:name="com.example.petdispenser.fragments.DietsList"
+        android:label="FragmentMain"
+        tools:layout="@layout/diets_list_fragment">
+        <action
+            android:id="@+id/action_diets_list_fragment_to_diet_info_fragment"
+            app:destination="@id/diet_info_fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_diets_list_fragment_to_dietForm"
+            app:destination="@id/dietForm"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/animals_list_fragment"
+        android:name="com.example.petdispenser.fragments.AnimalsList"
+        android:label="activity_lista_animali_da_mostrare"
+        tools:layout="@layout/animals_list_fragment">
+        <action
+            android:id="@+id/action_animals_list_fragment_to_animal_info_fragment"
+            app:destination="@id/animal_info_fragment" />
+        <action
+            android:id="@+id/action_animals_list_fragment_to_animal_form_fragment"
+            app:destination="@id/animal_form_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dispensers_list_fragment"
+        android:name="com.example.petdispenser.fragments.DispensersList"
+        android:label="dispensers_list_fragment"
+        tools:layout="@layout/dispensers_list_fragment">
+        <action
+            android:id="@+id/action_dispensers_list_fragment_to_dispenser_info_fragment"
+            app:destination="@id/dispenser_info_fragment" />
+        <action
+            android:id="@+id/action_dispensers_list_fragment_to_devices_scan_list_fragment"
+            app:destination="@id/devices_scan_list_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diet_info_fragment"
+        android:name="com.example.petdispenser.fragments.DietInfo"
+        android:label="diet_info_fragment"
+        tools:layout="@layout/diet_info_fragment" />
+    <fragment
+        android:id="@+id/animal_info_fragment"
+        android:name="com.example.petdispenser.fragments.AnimalInfo"
+        android:label="animal_info_fragment"
+        tools:layout="@layout/animal_info_fragment" />
+
+    <fragment
+        android:id="@+id/dispenser_info_fragment"
+        android:name="com.example.petdispenser.fragments.DispenserInfo"
+        android:label="dispenser_info_fragment"
+        tools:layout="@layout/dispenser_info_fragment" />
+    <fragment
+        android:id="@+id/animal_form_fragment"
+        android:name="com.example.petdispenser.fragments.AnimalForm"
+        android:label="animal_form_fragment"
+        tools:layout="@layout/animal_form_fragment" />
+    <fragment
+        android:id="@+id/calendar_fragment"
+        android:name="com.example.petdispenser.calendar"
+        android:label="calendar_fragment"
+        tools:layout="@layout/calendar_fragment" />
+    <fragment
+        android:id="@+id/devices_scan_list_fragment"
+        android:name="com.example.petdispenser.bluetooth.DeviceScanActivity"
+        android:label="devices_scan_list_fragment"
+        tools:layout="@layout/devices_scan_list_fragment">
+        <action
+            android:id="@+id/action_devices_scan_list_fragment_to_deviceControlActivity"
+            app:destination="@id/deviceControlActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/dietForm"
+        android:name="com.example.petdispenser.fragments.DietForm"
+        android:label="DietForm"
+        tools:layout="@layout/diet_form_fragment">
+        <action
+            android:id="@+id/action_dietForm_to_singleMealFormFragment"
+            app:destination="@id/singleMealFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleMealFormFragment"
+        android:name="com.example.petdispenser.fragments.SingleMealFormFragment"
+        android:label="single_meal_form_fragment"
+        tools:layout="@layout/single_meal_form_fragment" />
+    <fragment
+        android:id="@+id/deviceControlActivity"
+        android:name="com.example.petdispenser.bluetooth.DeviceControlActivity"
+        android:label="DeviceControlActivity"
+        tools:layout="@layout/gatt_services_characteristics">
+        <action
+            android:id="@+id/action_deviceControlActivity_to_singleMealInfo"
+            app:destination="@id/single_meal_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/single_meal_info"
+        android:name="com.example.petdispenser.fragments.SingleMealInfo"
+        android:label="SingleMealInfo"
+        tools:layout="@layout/single_meal_info" />
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.petdispenser.fragments.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.petdispenser.fragments.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>

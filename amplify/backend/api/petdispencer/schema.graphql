@@ -1,0 +1,43 @@
+type Pasto @model @auth(rules: [{allow: public}]) @key(name: "byDieta", fields: ["dietaID"]) {
+  id: ID!
+  nome: String
+  quantitaCroccantini: Int
+  quantitaUmido: Int
+  note: String
+  data: String
+  ora: String
+  dietaID: ID
+  idGoogleUtente: String!
+}
+
+type Animale @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  nomeAnimale: String!
+  idGoogleUtente: String!
+  tipologia: String
+  razza: String
+  peso: Float
+  ddn: String
+  path: String
+  dietaAnimaleId: [Dieta] @connection(keyName: "byAnimale", fields: ["id"])
+}
+
+type Dispenser @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  nome: String!
+  codiceBluetooth: String
+  DieteDispenser: [Dieta] @connection(keyName: "byDispenser", fields: ["id"])
+  idGoogleUtente: String!
+}
+
+type Dieta @model @auth(rules: [{allow: public}]) @key(name: "byDispenser", fields: ["dispenserID"]) @key(name: "byAnimale", fields: ["animaleID"]) {
+  id: ID!
+  nomeDieta: String!
+  note: String
+  dietaAttiva: String
+  dispenserID: ID
+  animaleID: ID
+  pastoDietaId: [Pasto] @connection(keyName: "byDieta", fields: ["id"])
+  idGoogleUtente: String!
+}
+ 

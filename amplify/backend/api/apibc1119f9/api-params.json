@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/items",
+      "lambdaFunction": "petdispencerb91fe4f5",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/items"
+    }
+  ],
+  "resourceName": "apibc1119f9",
+  "apiName": "apibc1119f9",
+  "functionArns": [
+    {
+      "lambdaFunction": "petdispencerb91fe4f5"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-petdispencer-ptenv-175303-authRole",
+    "unAuthRoleName": "amplify-petdispencer-ptenv-175303-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "petdispencerb91fe4f5",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

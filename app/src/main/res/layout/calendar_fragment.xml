@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/calendar_fragment"
+    tools:context=".calendar"
+    android:orientation="vertical">
+    <com.applandeo.materialcalendarview.CalendarView
+        android:id="@+id/calendarViewF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:datePicker="true"
+        app:type="one_day_picker"
+        app:daysLabelsColor="@color/colorPrimary"
+        app:headerColor="@color/colorPrimaryDark"
+        app:selectionColor="@color/grey"
+        app:selectionLabelColor="@color/colorPrimary">
+
+    </com.applandeo.materialcalendarview.CalendarView>
+    <ListView
+        android:id="@+id/listaEventiCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+ />
+
+
+
+</LinearLayout>
